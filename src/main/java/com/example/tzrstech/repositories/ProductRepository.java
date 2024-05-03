@@ -14,9 +14,6 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
     boolean existsById(Integer id);
     List<Product> findByProductName(String productName);
     boolean existsByProductName(String productName);
-//    @Query("select p from bi2.product p, bi2.category c " +
-//            "where p.category = c.category_id and c.category_name = :categoryName")
-//    List<Product> findByCategoryName(@Param("categoryName") String categoryName);
     List<Product> findByPrice(Integer price);
     List<Product> findByPriceBetween(Integer minPrice, Integer maxPrice);
     List<Product> findByCategory(Category category);
