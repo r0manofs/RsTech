@@ -48,11 +48,6 @@ public class ProductServiceImpl implements ProductService {
         else throw new EntityNotFoundException(productName);
     }
 
-//    public List<ProductDto> findByCategoryName(String categoryName) {
-//        return productMapper.toListDto(
-//                productRepository.findByCategoryName(categoryName));
-//    }
-
     public List<ProductDto> findByPrice(Integer price) {
         return productMapper.toListDto(
                 productRepository.findByPrice(price));
@@ -81,9 +76,6 @@ public class ProductServiceImpl implements ProductService {
     public void update(Integer id, ProductDto updatedProduct) throws ConstraintViolationException {
         if (!productRepository.existsById(id))
             throw new EntityNotFoundException(id);
-        //TODO Т.к я тут уже проверяю,
-        // может быть Optional уже и не нужен
-        //Для понимания lambda и пр. () это byId
         Optional<Product> product = productRepository.findById(id);
         product.ifPresent(entity -> {
             productMapper.updateProduct(updatedProduct, entity);
