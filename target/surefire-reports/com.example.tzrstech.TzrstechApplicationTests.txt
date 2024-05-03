@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.example.tzrstech.TzrstechApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.715 s -- in com.example.tzrstech.TzrstechApplicationTests

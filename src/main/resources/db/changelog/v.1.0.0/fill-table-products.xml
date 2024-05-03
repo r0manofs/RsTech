@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet author="RAA" id="fill-table-products">
+        <sql>
+            insert into product (product_name, description, price, appearence_date, status, category)
+            values ('Banana', 'Healthy food', 100, current_timestamp, true, 1);
+
+            insert into product (product_name, description, price, appearence_date, status, category)
+            values ('Apple', 'Healthy food', 100, current_timestamp, true , 1);
+
+            insert into product (product_name, description, price, appearence_date, status, category)
+            values ('Tomato', 'Red and juicy', 150, current_timestamp, true, 2);
+
+            insert into product (product_name, description, price, appearence_date, status, category)
+            values ('Cucumber', 'Its green', 99, current_timestamp, true, 2);
+
+            insert into product (product_name, description, price, appearence_date, status, category)
+            values ('Chainsaw', 'powerful', 1500, current_timestamp, true, 3);
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

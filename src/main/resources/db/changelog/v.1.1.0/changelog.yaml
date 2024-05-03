@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: create-table-categories.yaml
+  - include:
+      file: create-table-products.yaml
+  - include:
+      file: fill-table-categories.yaml
+  - include:
+      file: fill-table-products.yaml

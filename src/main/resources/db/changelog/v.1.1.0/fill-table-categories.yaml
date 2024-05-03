@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-table-categories
+      author: RAA
+      changes:
+        - sql:
+            sql: insert into category (category_name, description) values ('Fruits', 'Description fruits');
+        - sql:
+            sql: insert into category (category_name, description) values ('Vegetables', 'Description vegetables');
+        - sql:
+            sql: insert into category (category_name, description) values ('Other', 'Other category');

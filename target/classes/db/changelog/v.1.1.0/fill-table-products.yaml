@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: fill-table-products
+      author: RAA
+      changes:
+        - sql:
+            sql: insert into product (product_name, description, price, appearence_date, status, category) values ('Banana', 'Healthy food', 100, current_timestamp, true, 1);
+        - sql:
+            sql: insert into product (product_name, description, price, appearence_date, status, category) values ('Apple', 'Healthy food', 100, current_timestamp, true , 1);
+        - sql:
+            sql: insert into product (product_name, description, price, appearence_date, status, category) values ('Tomato', 'Red and juicy', 150, current_timestamp, true, 2);
+        - sql:
+            sql: insert into product (product_name, description, price, appearence_date, status, category) values ('Cucumber', 'Its green', 99, current_timestamp, true, 2);
+        - sql:
+            sql: insert into product (product_name, description, price, appearence_date, status, category) values ('Chainsaw', 'powerful', 1500, current_timestamp, true, 3);

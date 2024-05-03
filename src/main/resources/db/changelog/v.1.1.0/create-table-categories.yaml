@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-category
+      author: RAA
+      changes:
+        - createTable:
+            tableName: category
+            columns:
+              - column:
+                  name: category_id
+                  type: INTEGER
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: category_name
+                  type: VARCHAR(128)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: VARCHAR(128)
