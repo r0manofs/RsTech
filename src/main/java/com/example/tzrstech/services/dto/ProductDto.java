@@ -19,10 +19,6 @@ public class ProductDto {
     private Integer price;
     @Schema(description = "Дата поступления продукта в продажу")
     private Date appearenceDate;
-    //TODO Возможно не стоит назначать true напрямую
-    /**
-     * status = true by default, sets false only when delete category
-     */
     @Schema(description = "Статус продукта(активен/не активен)")
     private boolean status = true;
     @Schema(description = "Категория продукта")
