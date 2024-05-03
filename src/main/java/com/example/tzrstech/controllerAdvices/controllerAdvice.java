@@ -35,7 +35,6 @@ public class controllerAdvice {
 
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseEntity<ExceptionWrapper> validationException(ConstraintViolationException exception) {
-        //TODO Я хз так точно не должно быть
         String exceptionMessage = exception.getConstraintViolations().stream().toList().get(0).getMessage();
         return ResponseEntity
                 .status(HttpStatus.BAD_REQUEST)
